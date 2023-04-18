@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    color:#323232;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    height: 5rem;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+nav{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+nav .logo{
+    font-size:3rem;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li:not(:last-child){
+    list-style:none;
+    padding-right: 20px;
+}
+.container{
+    padding: 0px 10%;
+}
+nav ul li:last-child{
+    color:white;
+    background-color: #202020;
+    height: 3rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:4px;
+    cursor:pointer;
+}
+nav ul li a{
+    text-decoration:none;
+    color:inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul li a:hover{
+    font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* hero page  */
+
+.hero{
+    height: calc(100vh - 5rem);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+    font-size: 7rem;
+}
+.hero a{
+    all: unset;
+    cursor: pointer;
+    color: white;
+    background-color: #202020;
+    border-radius: 4px;
+    padding: 17px 25px;
+    margin-top: 3rem;
+    font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Course */
+
+.Course {
+    text-align: center;
+}
+/* card   */
+.card-arrange{
+    justify-items: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.card{
+    grid-column: auto;
+    border: 1px solid #202020;
+    margin: 10px;
+    width: 300px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+.card:hover{
+    box-shadow: -3px 3px 30px rgba(0, 0, 0, 0.321) ;
+
+}
+.card-image{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+.card-title{
+    font-weight: 700;
+    padding: 0.5rem;
+}
+.card-body .content{
+    padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* for mobile devices */
+@media screen and (max-width:768px) {
+    .logo{ 
+        margin: 0 auto;
+    }
+    nav ul {
+        display:none;
+    }
+    .hero h1{
+        font-size: 6rem;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+    background-color: #000;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
 }
