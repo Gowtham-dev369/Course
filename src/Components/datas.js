@@ -28,5 +28,10 @@ export default  [
         title:"AI & ML",
         content:"This is A web development Cource that will teach you a brief on  'WEBAPPS' ",
         image:"#5adf6b"
+    },
+    {
+        title:"HEHEH",
+        content:"loremegagaigpaign3aegbneog",
+        image:"#d40236"
     }
 ];
